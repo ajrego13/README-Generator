@@ -2,6 +2,7 @@
 const inquiror = require('inquirer'); 
 const fs = require('fs'); 
 const generateMarkdown = require('./utils/generateMarkdown'); 
+const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 
 const licenses = []; 
@@ -65,7 +66,17 @@ const writeToFile = (readmeInput) => {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer
+    .prompt(questions)
+    .then((data) => {
+        console.log(data); 
+        return writeToFile(data); 
+    })
+    .catch((err) => {
+        console.log(err); 
+    }); 
+}
 
 // Function call to initialize app
 init();
