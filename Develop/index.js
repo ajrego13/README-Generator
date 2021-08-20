@@ -4,9 +4,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown'); 
 // TODO: Create an array of questions for user input
 
-const licenses [
-
-]
+const licenses = []; 
 const questions = [
     {
         type: "input",
@@ -31,7 +29,7 @@ const questions = [
     {
         type: "input",
         name: "installation", 
-        message: "Enter the steps required to install your project"",
+        message: "Enter the steps required to install your project",
     },
     {
         type: "input",
